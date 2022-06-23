@@ -15,10 +15,12 @@ const {Builder, By, Key, until} = require("selenium-webdriver");
     // llenando el formulario
     //usuario
     var loginId = driver.findElement({xpath:'//*[@id="username"]'});
-    loginId.sendKeys("everth.navarro@ing.uab.edu.bo");
+    await driver.sleep(2000);
+    loginId.sendKeys('');
     //contraseña
     var passwd = driver.findElement(By.xpath('//*[@id="password"]'));
-	  passwd.sendKeys("##$Everth1999");
+    await driver.sleep(2000);
+	  passwd.sendKeys('');
     // hacemos click en el boton de inciar sesion
     const btn = await driver.findElement(By.xpath("/html/body/div/main/div[2]/div[1]/form/div[3]/button"));
         //scroll del raton 
